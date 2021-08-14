@@ -32,7 +32,7 @@ export const categorySlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchCategoriesAsync.fulfilled]: (state, action) => {
-      state.categories = ['All', ...action.payload];
+      state.categories = ['all', ...action.payload];
       state.status = "idle";
     },
     [fetchCategoriesAsync.pending]: (state, action) => {
