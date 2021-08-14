@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState, AppThunk } from "../../store/store";
+
+import { RootState } from "../../store/store";
 
 export interface CategoriesState {
   categories: string[];
@@ -31,7 +32,7 @@ export const categorySlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchCategoriesAsync.fulfilled]: (state, action) => {
-      state.categories = action.payload;
+      state.categories = ['All', ...action.payload];
       state.status = "idle";
     },
     [fetchCategoriesAsync.pending]: (state, action) => {
@@ -47,5 +48,8 @@ export const categorySlice = createSlice({
 
 export const selectCategories = (state: RootState) =>
   state.categories.categories;
+
+export const selectCategoriesStatus = (state: RootState) =>
+  state.categories.status;
 
 export default categorySlice.reducer;
