@@ -91,11 +91,11 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ 
-          headerTitle: 'Clothing', 
-          headerTintColor: "white" , 
+        options={{
+          headerTitle: 'Clothing',
+          headerTintColor: "white",
           headerTitleAlign: "center",
-          headerStyle: {backgroundColor: "#312e81"}, 
+          headerStyle: { backgroundColor: "#4B0082" },
         }}
       />
     </TabTwoStack.Navigator>
@@ -104,28 +104,28 @@ function TabTwoNavigator() {
 
 const TabThreeStack = createStackNavigator<TabThreeParamList>();
 
-function TabThreeNavigator(){
+function TabThreeNavigator() {
   return (
     <TabThreeStack.Navigator>
       <TabThreeStack.Screen
         name="TabThreeScreen"
         component={TabThreeScreen}
-        options={{headerTitle: "Favorite"}}
-        />
+        options={{ headerTitle: "Favorite" }}
+      />
     </TabThreeStack.Navigator>
   )
 }
 
 const TabFourStack = createStackNavigator<TabFourParamList>();
 
-function TabFourNavigator(){
+function TabFourNavigator() {
   return (
     <TabFourStack.Navigator>
       <TabFourStack.Screen
         name="TabFourScreen"
         component={TabFourScreen}
-        options={{headerTitle: "Profile"}}
-        />
+        options={{ headerTitle: "Profile" }}
+      />
     </TabFourStack.Navigator>
   )
 }
