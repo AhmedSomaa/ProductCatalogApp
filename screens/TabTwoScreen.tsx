@@ -4,7 +4,7 @@ import { StyleSheet, Text } from "react-native";
 import SelectableChips from 'react-native-chip/SelectableChips';
 
 import { View } from "../components/Themed";
-import { fetchCategoriesAsync, selectCategories, selectCategoriesStatus } from "../features/categories/categorySlice";
+import { fetchCategoriesAsync, selectCategories, selectCategoriesStatus } from "../store/categorySlice";
 import { useAppDispatch, useAppSelector } from "../store/store.hooks";
 
 export default function TabTwoScreen() {
