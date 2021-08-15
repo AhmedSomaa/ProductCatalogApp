@@ -6,7 +6,13 @@ import SelectableChips from "react-native-chip/SelectableChips";
 
 import { View } from "../components/Themed";
 import { fetchCategoriesAsync, selectCategories, selectCategoriesStatus } from "../store/categorySlice";
-import { addToFavorites, fetchProductsAsync, IProduct, selectProducts, selectProductsStatus } from "../store/productSlices";
+import {
+    addToFavorites,
+    fetchProductsAsync,
+    IProduct,
+    selectProducts,
+    selectProductsStatus
+} from "../store/productSlices";
 import { useAppDispatch, useAppSelector } from "../store/store.hooks";
 
 export default function TabTwoScreen({ navigation }: any) {

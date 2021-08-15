@@ -30,7 +30,7 @@ export default function BottomTabNavigator() {
                 style: {
                     borderTopWidth: 0,
                     borderTopLeftRadius: 20,
-                    borderTopRightRadius: 20,
+                    borderTopRightRadius: 20
                 }
             }}
         >
