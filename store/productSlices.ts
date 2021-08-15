@@ -42,7 +42,7 @@ export const productSlice = createSlice({
             // id-1 => products ids starting from 1 while array indecies start at 0
             // product[0] => id = 1
             state.products[id - 1].favorite = favorite;
-            state.favourites = [...state.favourites, state.products[id - 1]];
+            state.favourites = favorite ? [...state.favourites, state.products[id - 1]] : [];
         }
     },
     extraReducers: {
@@ -66,5 +66,6 @@ export const productSlice = createSlice({
 export const { addToFavorites } = productSlice.actions;
 export const selectProducts = (state: RootState) => state.products.products;
 export const selectProductsStatus = (state: RootState) => state.products.status;
+export const selectFavouriteProducts = (state: RootState) => state.products.favourites;
 
 export default productSlice.reducer;
