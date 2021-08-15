@@ -1,7 +1,7 @@
-import { Ionicons } from '@expo/vector-icons';
-import { Icon, IconButton, VStack } from 'native-base';
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
+import { Icon, IconButton, VStack } from "native-base";
+import * as React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function ProductScreen({ navigation, route }: any) {
     const { title, price } = route.params;
@@ -10,8 +10,8 @@ export default function ProductScreen({ navigation, route }: any) {
             <View style={styles.header}>
                 <IconButton
                     size="sm"
-                    onPress={() => (navigation.navigate("TabTwo"))}
-                    icon={<Icon as={Ionicons} name="arrow-back-outline" color='white' size="sm" />}
+                    onPress={() => navigation.navigate("TabTwo")}
+                    icon={<Icon as={Ionicons} name="arrow-back-outline" color="white" size="sm" />}
                 />
             </View>
             <View style={styles.productInfo}>
@@ -21,7 +21,7 @@ export default function ProductScreen({ navigation, route }: any) {
                 </VStack>
             </View>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         height: 56,
         width: "100%",
         flexDirection: "row",
-        backgroundColor: "indigo",
+        backgroundColor: "indigo"
     },
     productInfo: {
         paddingVertical: 10,
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: "900"
     }
-})
+});

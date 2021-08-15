@@ -24,34 +24,31 @@ const initialState: ProductsState = {
     status: "idle"
 };
 
-export const fetchProductsAsync: any = createAsyncThunk(
-    "products/fetchProducts",
-    async () => {
-        try {
-            const response = await fetch("https://fakestoreapi.com/products");
-            return await response.json();
-        } catch (error) {
-            Promise.reject(error);
-        }
+export const fetchProductsAsync: any = createAsyncThunk("products/fetchProducts", async () => {
+    try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        return await response.json();
+    } catch (error) {
+        Promise.reject(error);
     }
-)
+});
 
 export const productSlice = createSlice({
     name: "products",
     initialState,
     reducers: {
         addToFavorites: (state, action) => {
-            const {id, favorite} = action.payload;
+            const { id, favorite } = action.payload;
             // id-1 => products ids starting from 1 while array indecies start at 0
             // product[0] => id = 1
-            state.products[id-1].favorite = favorite;
-            state.favourites = [...state.favourites, state.products[id-1]];
+            state.products[id - 1].favorite = favorite;
+            state.favourites = [...state.favourites, state.products[id - 1]];
         }
     },
     extraReducers: {
         [fetchProductsAsync.fulfilled]: (state, action) => {
             state.products = action.payload.map((item: any) => {
-                return {...item, favorite: false}
+                return { ...item, favorite: false };
             });
             state.status = "idle";
         },
@@ -64,7 +61,7 @@ export const productSlice = createSlice({
             state.status = "failed";
         }
     }
-})
+});
 
 export const { addToFavorites } = productSlice.actions;
 export const selectProducts = (state: RootState) => state.products.products;

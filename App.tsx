@@ -12,21 +12,21 @@ import { store } from "./store/store";
 import "react-native-gesture-handler";
 
 export default function App() {
-  const isLoadingComplete = useCachedResources();
-  const colorScheme = useColorScheme();
+    const isLoadingComplete = useCachedResources();
+    const colorScheme = useColorScheme();
 
-  if (!isLoadingComplete) {
-    return null;
-  } else {
-    return (
-      <SafeAreaProvider>
-        <NativeBaseProvider>
-        <Provider store={store}>
-          <Navigation colorScheme={colorScheme} />
-          <StatusBar />
-        </Provider>
-        </NativeBaseProvider>
-      </SafeAreaProvider>
-    );
-  }
+    if (!isLoadingComplete) {
+        return null;
+    } else {
+        return (
+            <SafeAreaProvider>
+                <NativeBaseProvider>
+                    <Provider store={store}>
+                        <Navigation colorScheme={colorScheme} />
+                        <StatusBar />
+                    </Provider>
+                </NativeBaseProvider>
+            </SafeAreaProvider>
+        );
+    }
 }
