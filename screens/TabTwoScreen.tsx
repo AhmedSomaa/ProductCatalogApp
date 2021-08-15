@@ -26,7 +26,7 @@ export default function TabTwoScreen({ navigation }: any) {
         const getProductsPromise = dispatch(fetchProductsAsync());
         return () => {
             getCategoriesPromise.abort();
-            getProductsPromise.abort(); s
+            getProductsPromise.abort();
         };
     }, [dispatch]);
 
@@ -140,7 +140,8 @@ const styles = StyleSheet.create({
         paddingRight: 25,
         paddingBottom: 0,
         borderRadius: 25,
-        backgroundColor: "white"
+        backgroundColor: "white",
+        textTransform: "capitalize"
     },
     badgeValueSelected: {
         fontSize: 15,
@@ -150,7 +151,8 @@ const styles = StyleSheet.create({
         paddingRight: 25,
         paddingBottom: 0,
         borderRadius: 25,
-        backgroundColor: "orange"
+        backgroundColor: "orange",
+        textTransform: "capitalize"
     },
     products: {
         flex: 1,
@@ -158,6 +160,7 @@ const styles = StyleSheet.create({
         backgroundColor: "smokewhite"
     },
     productsLengthText: {
+        fontSize: 20,
         fontWeight: "900",
         marginHorizontal: 5
     },
