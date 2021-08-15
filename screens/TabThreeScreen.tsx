@@ -3,10 +3,10 @@ import { StyleSheet } from "react-native";
 
 import { Text, View } from "../components/Themed";
 
-export default function TabOneScreen() {
+export default function TabThreeScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Home</Text>
+            <Text style={styles.title}>Favorite</Text>
         </View>
     );
 }
