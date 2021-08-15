@@ -64,7 +64,9 @@ export default function BottomTabNavigator() {
                 options={{
                     tabBarLabel: "Favorite",
                     tabBarBadge: showBadge ? favorites.length : "",
-                    tabBarBadgeStyle: showBadge ? { color: "white", backgroundColor: "orange" } : { backgroundColor: "transparent" },
+                    tabBarBadgeStyle: showBadge
+                        ? { color: "white", backgroundColor: "orange" }
+                        : { backgroundColor: "transparent" },
                     tabBarIcon: ({ focused, color }) => (
                         <TabBarIcon name={focused ? "heart" : "heart-outline"} color={color} />
                     )
