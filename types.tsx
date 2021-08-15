@@ -4,29 +4,30 @@
  */
 
 export type RootStackParamList = {
-  Root: undefined;
-  NotFound: undefined;
+    Root: undefined;
+    NotFound: undefined;
+    Product: undefined;
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
-  TabThree: undefined;
-  TabFour: undefined;
+    TabOne: undefined;
+    TabTwo: undefined;
+    TabThree: undefined;
+    TabFour: undefined;
 };
 
 export type TabOneParamList = {
-  TabOneScreen: undefined;
+    TabOneScreen: undefined;
 };
 
 export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+    TabTwoScreen: undefined;
 };
 
 export type TabThreeParamList = {
-  TabThreeScreen: undefined;
-}
+    TabThreeScreen: undefined;
+};
 
 export type TabFourParamList = {
-  TabFourScreen: undefined;
-}
+    TabFourScreen: undefined;
+};
