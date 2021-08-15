@@ -13,7 +13,7 @@ const initialState: CategoriesState = {
 };
 
 export const fetchCategoriesAsync: any = createAsyncThunk(
-  "counter/fetchCategories",
+  "categories/fetchCategories",
   async () => {
     try {
       const response = await fetch(
@@ -32,7 +32,7 @@ export const categorySlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchCategoriesAsync.fulfilled]: (state, action) => {
-      state.categories = ['all', ...action.payload];
+      state.categories = ["all", ...action.payload];
       state.status = "idle";
     },
     [fetchCategoriesAsync.pending]: (state, action) => {
