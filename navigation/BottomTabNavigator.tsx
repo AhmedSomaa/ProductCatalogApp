@@ -39,7 +39,9 @@ export default function BottomTabNavigator() {
                 component={TabOneNavigator}
                 options={{
                     tabBarLabel: "Home",
-                    tabBarIcon: ({ focused, color }) => <TabBarIcon name={focused ? "home" : "home-outline"} color={color} />
+                    tabBarIcon: ({ focused, color }) => (
+                        <TabBarIcon name={focused ? "home" : "home-outline"} color={color} />
+                    )
                 }}
             />
             <BottomTab.Screen
@@ -47,7 +49,9 @@ export default function BottomTabNavigator() {
                 component={TabTwoNavigator}
                 options={{
                     tabBarLabel: "Catalogue",
-                    tabBarIcon: ({ focused, color }) => <TabBarIcon name={focused ? "grid" : "grid-outline"} color={color} />
+                    tabBarIcon: ({ focused, color }) => (
+                        <TabBarIcon name={focused ? "grid" : "grid-outline"} color={color} />
+                    )
                 }}
             />
             <BottomTab.Screen
@@ -55,7 +59,9 @@ export default function BottomTabNavigator() {
                 component={TabThreeNavigator}
                 options={{
                     tabBarLabel: "Favorite",
-                    tabBarIcon: ({ focused, color }) => <TabBarIcon name={focused ? "heart" : "heart-outline"} color={color} />
+                    tabBarIcon: ({ focused, color }) => (
+                        <TabBarIcon name={focused ? "heart" : "heart-outline"} color={color} />
+                    )
                 }}
             />
             <BottomTab.Screen
@@ -63,7 +69,9 @@ export default function BottomTabNavigator() {
                 component={TabFourNavigator}
                 options={{
                     tabBarLabel: "Profile",
-                    tabBarIcon: ({ focused, color }) => <TabBarIcon name={focused ? "person" : "person-outline"} color={color} />
+                    tabBarIcon: ({ focused, color }) => (
+                        <TabBarIcon name={focused ? "person" : "person-outline"} color={color} />
+                    )
                 }}
             />
         </BottomTab.Navigator>
