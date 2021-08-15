@@ -14,12 +14,16 @@ import TabFourScreen from "../screens/TabFourScreen";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabThreeScreen from "../screens/TabThreeScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
+import { selectFavouriteProducts } from "../store/productSlices";
+import { useAppSelector } from "../store/store.hooks";
 import { BottomTabParamList, TabFourParamList, TabOneParamList, TabThreeParamList, TabTwoParamList } from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
     const colorScheme = useColorScheme();
+    const favorites = useAppSelector(selectFavouriteProducts);
+    const showBadge = favorites.length !== 0;
 
     return (
         <BottomTab.Navigator
@@ -59,6 +63,8 @@ export default function BottomTabNavigator() {
                 component={TabThreeNavigator}
                 options={{
                     tabBarLabel: "Favorite",
+                    tabBarBadge: showBadge ? favorites.length : "",
+                    tabBarBadgeStyle: showBadge ? { color: "white", backgroundColor: "orange" } : { backgroundColor: "transparent" },
                     tabBarIcon: ({ focused, color }) => (
                         <TabBarIcon name={focused ? "heart" : "heart-outline"} color={color} />
                     )
