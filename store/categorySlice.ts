@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { RootState } from "../../store/store";
+import { RootState } from "./store";
 
 export interface CategoriesState {
   categories: string[];
