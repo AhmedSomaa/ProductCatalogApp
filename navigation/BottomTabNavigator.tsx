@@ -24,7 +24,15 @@ export default function BottomTabNavigator() {
     return (
         <BottomTab.Navigator
             initialRouteName="TabOne"
-            tabBarOptions={{ activeTintColor: Colors[colorScheme].tint, labelPosition: "below-icon" }}
+            tabBarOptions={{
+                labelPosition: "below-icon",
+                activeTintColor: Colors[colorScheme].tint,
+                style: {
+                    borderTopWidth: 0,
+                    borderTopLeftRadius: 20,
+                    borderTopRightRadius: 20,
+                }
+            }}
         >
             <BottomTab.Screen
                 name="TabOne"
